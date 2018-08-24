@@ -16,6 +16,16 @@
 		9855E7BD21239AB800B242AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9855E7BB21239AB800B242AE /* LaunchScreen.storyboard */; };
 		9855E7C821239AB900B242AE /* CBC_SACHATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7C721239AB900B242AE /* CBC_SACHATests.swift */; };
 		9855E7D321239AB900B242AE /* CBC_SACHAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7D221239AB900B242AE /* CBC_SACHAUITests.swift */; };
+		9855E7E12123D4D600B242AE /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7E02123D4D600B242AE /* RSSTableViewCell.swift */; };
+		9855E7E321249FF200B242AE /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7E221249FF200B242AE /* Article.swift */; };
+		9855E7E52124A7A300B242AE /* RSSFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7E42124A7A300B242AE /* RSSFeedService.swift */; };
+		9855E7E72124BD5700B242AE /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7E62124BD5700B242AE /* ImageDownloadService.swift */; };
+		9855E7E92124E54800B242AE /* RSSParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7E82124E54800B242AE /* RSSParseService.swift */; };
+		9855E7ED21254FC300B242AE /* Extesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7EC21254FC300B242AE /* Extesions.swift */; };
+		9855E7EF2128CF7900B242AE /* RSSImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7EE2128CF7900B242AE /* RSSImageCache.swift */; };
+		9855E7F12129031F00B242AE /* RSSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7F02129031F00B242AE /* RSSImageView.swift */; };
+		9855E7F321294B7500B242AE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7F221294B7500B242AE /* Reachability.swift */; };
+		9855E7F5212A4AF600B242AE /* MasterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7F4212A4AF600B242AE /* MasterViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,16 @@
 		9855E7CE21239AB900B242AE /* CBC SACHAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBC SACHAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9855E7D221239AB900B242AE /* CBC_SACHAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBC_SACHAUITests.swift; sourceTree = "<group>"; };
 		9855E7D421239AB900B242AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9855E7E02123D4D600B242AE /* RSSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTableViewCell.swift; sourceTree = "<group>"; };
+		9855E7E221249FF200B242AE /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		9855E7E42124A7A300B242AE /* RSSFeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedService.swift; sourceTree = "<group>"; };
+		9855E7E62124BD5700B242AE /* ImageDownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
+		9855E7E82124E54800B242AE /* RSSParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParseService.swift; sourceTree = "<group>"; };
+		9855E7EC21254FC300B242AE /* Extesions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extesions.swift; sourceTree = "<group>"; };
+		9855E7EE2128CF7900B242AE /* RSSImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSImageCache.swift; sourceTree = "<group>"; };
+		9855E7F02129031F00B242AE /* RSSImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSImageView.swift; sourceTree = "<group>"; };
+		9855E7F221294B7500B242AE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9855E7F4212A4AF600B242AE /* MasterViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +121,15 @@
 		9855E7AC21239AB800B242AE /* CBC SACHA */ = {
 			isa = PBXGroup;
 			children = (
-				9855E7AD21239AB800B242AE /* AppDelegate.swift */,
+				9855E7EA2125287400B242AE /* Services */,
+				9855E7EB2125289B00B242AE /* base */,
 				9855E7B221239AB800B242AE /* MasterViewController.swift */,
 				9855E7B421239AB800B242AE /* DetailViewController.swift */,
 				9855E7B621239AB800B242AE /* Main.storyboard */,
-				9855E7B921239AB800B242AE /* Assets.xcassets */,
-				9855E7BB21239AB800B242AE /* LaunchScreen.storyboard */,
-				9855E7BE21239AB800B242AE /* Info.plist */,
-				9855E7AF21239AB800B242AE /* CBC_SACHA.xcdatamodeld */,
+				9855E7E02123D4D600B242AE /* RSSTableViewCell.swift */,
+				9855E7E221249FF200B242AE /* Article.swift */,
+				9855E7EC21254FC300B242AE /* Extesions.swift */,
+				9855E7F02129031F00B242AE /* RSSImageView.swift */,
 			);
 			path = "CBC SACHA";
 			sourceTree = "<group>";
@@ -118,6 +139,7 @@
 			children = (
 				9855E7C721239AB900B242AE /* CBC_SACHATests.swift */,
 				9855E7C921239AB900B242AE /* Info.plist */,
+				9855E7F4212A4AF600B242AE /* MasterViewControllerTest.swift */,
 			);
 			path = "CBC SACHATests";
 			sourceTree = "<group>";
@@ -129,6 +151,30 @@
 				9855E7D421239AB900B242AE /* Info.plist */,
 			);
 			path = "CBC SACHAUITests";
+			sourceTree = "<group>";
+		};
+		9855E7EA2125287400B242AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9855E7E42124A7A300B242AE /* RSSFeedService.swift */,
+				9855E7E62124BD5700B242AE /* ImageDownloadService.swift */,
+				9855E7E82124E54800B242AE /* RSSParseService.swift */,
+				9855E7EE2128CF7900B242AE /* RSSImageCache.swift */,
+				9855E7F221294B7500B242AE /* Reachability.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9855E7EB2125289B00B242AE /* base */ = {
+			isa = PBXGroup;
+			children = (
+				9855E7AD21239AB800B242AE /* AppDelegate.swift */,
+				9855E7B921239AB800B242AE /* Assets.xcassets */,
+				9855E7BB21239AB800B242AE /* LaunchScreen.storyboard */,
+				9855E7BE21239AB800B242AE /* Info.plist */,
+				9855E7AF21239AB800B242AE /* CBC_SACHA.xcdatamodeld */,
+			);
+			name = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +315,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9855E7AE21239AB800B242AE /* AppDelegate.swift in Sources */,
+				9855E7E72124BD5700B242AE /* ImageDownloadService.swift in Sources */,
+				9855E7EF2128CF7900B242AE /* RSSImageCache.swift in Sources */,
+				9855E7F12129031F00B242AE /* RSSImageView.swift in Sources */,
+				9855E7ED21254FC300B242AE /* Extesions.swift in Sources */,
+				9855E7E12123D4D600B242AE /* RSSTableViewCell.swift in Sources */,
+				9855E7E92124E54800B242AE /* RSSParseService.swift in Sources */,
+				9855E7E321249FF200B242AE /* Article.swift in Sources */,
+				9855E7E52124A7A300B242AE /* RSSFeedService.swift in Sources */,
 				9855E7B121239AB800B242AE /* CBC_SACHA.xcdatamodeld in Sources */,
 				9855E7B321239AB800B242AE /* MasterViewController.swift in Sources */,
 				9855E7B521239AB800B242AE /* DetailViewController.swift in Sources */,
+				9855E7F321294B7500B242AE /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9855E7F5212A4AF600B242AE /* MasterViewControllerTest.swift in Sources */,
 				9855E7C821239AB900B242AE /* CBC_SACHATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

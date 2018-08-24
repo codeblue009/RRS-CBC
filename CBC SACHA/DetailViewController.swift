@@ -23,8 +23,7 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
                                               timeoutInterval: 10.0)
                 }
                 else {
-                    self.navigationController?.popViewController(animated: true)
-                    //Reachability.showNoConnectionAlert()
+                    Reachability.showNoConnectionAlert()
                 }
             }
         }

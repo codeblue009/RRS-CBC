@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9839ED2421308A5000027732 /* RSSFeedServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839ED2321308A5000027732 /* RSSFeedServiceTest.swift */; };
+		9839ED2621332C5500027732 /* RSSParseServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839ED2521332C5500027732 /* RSSParseServiceTest.swift */; };
 		9855E7AE21239AB800B242AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7AD21239AB800B242AE /* AppDelegate.swift */; };
 		9855E7B121239AB800B242AE /* CBC_SACHA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7AF21239AB800B242AE /* CBC_SACHA.xcdatamodeld */; };
 		9855E7B321239AB800B242AE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855E7B221239AB800B242AE /* MasterViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9839ED2321308A5000027732 /* RSSFeedServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedServiceTest.swift; sourceTree = "<group>"; };
+		9839ED2521332C5500027732 /* RSSParseServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParseServiceTest.swift; sourceTree = "<group>"; };
 		9855E7AA21239AB800B242AE /* CBC SACHA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBC SACHA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9855E7AD21239AB800B242AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9855E7B021239AB800B242AE /* CBC_SACHA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CBC_SACHA.xcdatamodel; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				9855E7C721239AB900B242AE /* CBC_SACHATests.swift */,
 				9855E7C921239AB900B242AE /* Info.plist */,
 				9855E7F4212A4AF600B242AE /* MasterViewControllerTest.swift */,
+				9839ED2321308A5000027732 /* RSSFeedServiceTest.swift */,
+				9839ED2521332C5500027732 /* RSSParseServiceTest.swift */,
 			);
 			path = "CBC SACHATests";
 			sourceTree = "<group>";
@@ -334,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9839ED2621332C5500027732 /* RSSParseServiceTest.swift in Sources */,
 				9855E7F5212A4AF600B242AE /* MasterViewControllerTest.swift in Sources */,
 				9855E7C821239AB900B242AE /* CBC_SACHATests.swift in Sources */,
+				9839ED2421308A5000027732 /* RSSFeedServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +586,7 @@
 				9855E7D921239AB900B242AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9855E7DA21239AB900B242AE /* Build configuration list for PBXNativeTarget "CBC SACHATests" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +595,7 @@
 				9855E7DC21239AB900B242AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9855E7DD21239AB900B242AE /* Build configuration list for PBXNativeTarget "CBC SACHAUITests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +604,7 @@
 				9855E7DF21239AB900B242AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

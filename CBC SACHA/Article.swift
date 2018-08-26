@@ -1,4 +1,3 @@
-//
 //  Article.swift
 //  CBC SACHA
 //

@@ -17,7 +17,6 @@ class RSSParseService: NSObject, XMLParserDelegate {
     var isAuthor = false
     var isDate = false
     var isLink = false
-    var isDescription = false
     
     func parseRSS(fromURL urlString: String) {
         if let url = URL(string: urlString),
@@ -28,10 +27,9 @@ class RSSParseService: NSObject, XMLParserDelegate {
         }
     }
     
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        
+    func parseType(byTag tag: String) {
         if isNewItem {
-            switch elementName {
+            switch tag {
             case "title": isTitle = true
                 break
             case "author": isAuthor = true
@@ -40,19 +38,17 @@ class RSSParseService: NSObject, XMLParserDelegate {
                 break
             case "pubDate": isDate = true
                 break
-            case "description": isDescription = true
-                break
             default: break
             }
         }
-        else if elementName == "item" {
+        else if tag == "item" {
             isNewItem = true
             currentArticle = Article()
         }
     }
     
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "item" {
+    func parseNewItemTag(tag: String) {
+        if tag == "item" {
             isNewItem = false
             if let article = currentArticle {
                 parsedArticles.append(article)
@@ -60,8 +56,10 @@ class RSSParseService: NSObject, XMLParserDelegate {
         }
     }
     
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
+    func parseArticle(characters string: String) {
+        
         guard let article = currentArticle else { return }
+        
         if isTitle {
             article.title = string
             isTitle = false
@@ -90,7 +88,18 @@ class RSSParseService: NSObject, XMLParserDelegate {
                 }
             }
         }
-        
+    }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        parseType(byTag: elementName)
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        parseNewItemTag(tag: elementName)
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        parseArticle(characters: string)
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
